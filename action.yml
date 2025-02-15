@@ -110,6 +110,7 @@ runs:
         shell: bash
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        working-directory: ${{ inputs.working_path }}
         with:
           path: ${{ inputs.build_path }}
           name: ${{ inputs.artifact_name }}
